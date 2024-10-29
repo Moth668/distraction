@@ -19,6 +19,17 @@ header {
     margin: 20px 0;
 }
 
+#points-section {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+
 button {
     padding: 10px;
     margin: 10px 5px;
@@ -89,5 +100,15 @@ button:hover {
         width: 28%;
         vertical-align: top;
         margin: 10px 1%;
+    }
+
+    #points-section {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        background-color: #f4f4f4;
+        padding: 10px;
+        border-radius: 5px;
+        font-size: 18px;
     }
 }

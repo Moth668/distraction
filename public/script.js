@@ -1,3 +1,6 @@
+// import Sortable from 'sortablejs';
+
+
 let timer;
 let timeRemaining = 24 * 60; // 24 minutes in seconds
 let points = 0.0;
@@ -47,17 +50,15 @@ function moveTaskToDone(taskElement) {
     addPointsForTaskCompletion();
 }
 
-// Kanban Board Logic - basic add task, move task to Done logic
-// document.getElementById('add-task-button').addEventListener('click', () => {
-//     const taskText = document.getElementById('todo-input').value;
-//     if (taskText) {
-//         const li = document.createElement('li');
-//         li.innerText = taskText;
-//         li.addEventListener('click', () => moveTaskToDone(li)); // Move to Done on click
-//         document.getElementById('todo-list').appendChild(li);
-//         document.getElementById('todo-input').value = '';
-//     }
-// });
+// Initialize SortableJS for drag-and-drop functionality
+document.addEventListener('DOMContentLoaded', () => {
+    const todoList = document.getElementById('todo-list'); // Ensure the todo-list element is correctly referenced
+
+    new Sortable(todoList, {
+        animation: 150, // Smooth dragging animation
+    });
+});
+
 
 // Kanban Board Logic - add tasks with checkboxes
 document.getElementById('add-task-button').addEventListener('click', () => {

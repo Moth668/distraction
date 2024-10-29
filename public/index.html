@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Distraction - Flat-Rate Tracker</title>
+    <title>distraction</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"></script>
+
 </head>
 <body>
     <header>
-        <h1>Distraction Flat-Rate Tracker</h1>
+        <h1>Distraction</h1>
         <p>Focus for 24-minute blocks and manage your distractions effectively.</p>
     </header>
 
@@ -27,22 +29,23 @@
         <div id="points-display">Points: 0.0</div>
     </section>
 
-<!-- Updated Kanban Section with Done Checkboxes -->
+<!-- Drag-and-Drop Ordered List in Kanban Board -->
 <section id="kanban-section">
     <h2>Distraction Board</h2>
     <div class="kanban-column">
-        <h3>To Do</h3>
-        <ul id="todo-list"></ul>
-        <input type="text" id="todo-input" placeholder="Add a distraction...">
-        <button id="add-task-button">Add Distraction</button>
+        <h3>To Do (Ordered List)</h3>
+        <ol id="todo-list"></ol> <!-- Ordered List -->
+        <input type="text" id="todo-input" placeholder="Add a task...">
+        <button id="add-task-button">Add Task</button>
     </div>
+    <!-- done list in kanban board -->
     <div class="kanban-column">
         <h3>Done</h3>
         <ul id="done-list"></ul>
     </div>
 </section>
 
-
+<!-- link to script.js file -->
     <script src="script.js"></script>
 </body>
 </html>
