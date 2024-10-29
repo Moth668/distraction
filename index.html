@@ -27,16 +27,21 @@
         <div id="points-display">Points: 0.0</div>
     </section>
 
-    <!-- Kanban Board -->
-    <section id="kanban-section">
-        <h2>Distraction Board</h2>
-        <div class="kanban-column">
-            <h3>To Do</h3>
-            <ul id="todo-list"></ul>
-            <input type="text" id="todo-input" placeholder="Add a distraction...">
-            <button id="add-task-button">Add Distraction</button>
-        </div>
-    </section>
+<!-- Updated Kanban Section with Done Checkboxes -->
+<section id="kanban-section">
+    <h2>Distraction Board</h2>
+    <div class="kanban-column">
+        <h3>To Do</h3>
+        <ul id="todo-list"></ul>
+        <input type="text" id="todo-input" placeholder="Add a distraction...">
+        <button id="add-task-button">Add Distraction</button>
+    </div>
+    <div class="kanban-column">
+        <h3>Done</h3>
+        <ul id="done-list"></ul>
+    </div>
+</section>
+
 
     <script src="script.js"></script>
 </body>

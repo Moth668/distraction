@@ -33,14 +33,47 @@ function addPoints(amount) {
     document.getElementById('points-display').innerText = `Points: ${points.toFixed(1)}`;
 }
 
-// Kanban Board Logic
+// Function to add points based on task completion
+function addPointsForTaskCompletion() {
+    // Add 0.1 points for each completed task
+    addPoints(0.1);
+}
+
+// Add event listener for clicking on tasks
+function moveTaskToDone(taskElement) {
+    // Remove from current list and move to 'Done' column
+    document.getElementById('done-list').appendChild(taskElement);
+    // Call the function to add points when a task is marked done
+    addPointsForTaskCompletion();
+}
+
+// Kanban Board Logic - basic add task, move task to Done logic
+// document.getElementById('add-task-button').addEventListener('click', () => {
+//     const taskText = document.getElementById('todo-input').value;
+//     if (taskText) {
+//         const li = document.createElement('li');
+//         li.innerText = taskText;
+//         li.addEventListener('click', () => moveTaskToDone(li)); // Move to Done on click
+//         document.getElementById('todo-list').appendChild(li);
+//         document.getElementById('todo-input').value = '';
+//     }
+// });
+
+// Kanban Board Logic - add tasks with checkboxes
 document.getElementById('add-task-button').addEventListener('click', () => {
     const taskText = document.getElementById('todo-input').value;
     if (taskText) {
         const li = document.createElement('li');
-        li.innerText = taskText;
+        const checkbox = document.createElement('input');
+        checkbox.type = 'checkbox';
+        checkbox.addEventListener('change', () => {
+            if (checkbox.checked) moveTaskToDone(li);
+        });
+
+        li.appendChild(checkbox);
+        li.appendChild(document.createTextNode(taskText));
         document.getElementById('todo-list').appendChild(li);
-        document.getElementById('todo-input').value = '';
+        document.getElementById('todo-input').value = ''; // Clear input
     }
 });
 
