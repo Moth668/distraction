@@ -52,4 +52,25 @@ button {
     width: 85%;
     margin-top: 10px;
     border: none;
- 
+    background-color: #27ae60;
+    color: white;
+    border-radius: 5px;
+}
+
+/* Media Query for Larger Screens */
+@media (min-width: 768px) {
+    #timer-display {
+        font-size: 60px;
+    }
+
+    button {
+        width: 30%;
+    }
+
+    .kanban-column {
+        display: inline-block;
+        width: 28%;
+        vertical-align: top;
+        margin: 10px 1%;
+    }
+}

@@ -13,4 +13,7 @@ Minimize distractions.
 Maximize Efficiency.
 Earn Points. Spend your time. 
 
-Initial Idea: ![starter code, first draft](image.png)
+
+Idea Evolution
+1.Initial Idea: ![starter code, first draft](image.png)
+2. Mobile First Adjustments: ![altered css file](image-1.png)
