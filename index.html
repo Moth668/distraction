@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Distraction - Flat-Rate Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Distraction Flat-Rate Tracker</h1>
+        <p>Focus for 24-minute blocks and manage your distractions effectively.</p>
+    </header>
+
+    <!-- Timer Section -->
+    <section id="timer-section">
+        <h2>Focus Timer</h2>
+        <div id="timer-display">24:00</div>
+        <button id="start-button">Start</button>
+        <button id="pause-button">Pause</button>
+        <button id="reset-button">Reset</button>
+    </section>
+
+    <!-- Points Section -->
+    <section id="points-section">
+        <h2>Points Earned</h2>
+        <div id="points-display">Points: 0.0</div>
+    </section>
+
+    <!-- Kanban Board -->
+    <section id="kanban-section">
+        <h2>Distraction Board</h2>
+        <div class="kanban-column">
+            <h3>To Do</h3>
+            <ul id="todo-list"></ul>
+            <input type="text" id="todo-input" placeholder="Add a distraction...">
+            <button id="add-task-button">Add Distraction</button>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
